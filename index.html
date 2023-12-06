@@ -2,45 +2,92 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora 2 </title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITLE -->
+    <title>Calculadora | DevBSB</title>
+
+    <!-- SEO TAGS -->
+    <meta name="description"
+        content="Uma simples calculadora com funções báricas: adição, subtração, multiplicação e divisão, desenvolvida em HMTL, CSS e Javascript." />
+    <meta name="keywords"
+        content="calculadora, devbsb, html, css, javascript, animation, adição, subtração, multiplicação, divisão, projeto" />
+    <meta name="robots" content="" />
+    <meta name="revisit-after" content="1 day" />
+    <meta name="language" content="Portuguese" />
+    <meta name="generator" content="N/A" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="/img/favicon.ico" />
+
+    <!-- FONT ROTOBO -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- STYLE CSS -->
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="calc">
-        <h3>Calculadora</h3>
-        <div id="operations">
-            <div id="previous-operations">
-              
-            </div>
-            <div id="current-operation">
-          
-            </div>
-            <div id="buttons-container">
-            <button>CE</button>
-            <button>C</button>
-            <button>DEL</button>
-            <button>/</button>
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button>*</button>
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button>-</button> 
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button>+</button>
-            <button class="number">0</button>
-            <button class="number">.</button>
-            <button id="equal-btn">=</button>
+
+    <!-- CALCULATOR -->
+    <div class="calculator">
+
+        <!-- DISPLAY -->
+        <div class="display">
+            <input id="display" placeholder="0" disabled>
+            <h2 id="history"></h2>
         </div>
+
+        <!-- <BUTTONS -->
+        <div class="row">
+            <button class="button purple-text" onclick="limpar()">AC</button>
+            <div></div>
+            <div></div>
+            <button class="button gray" onclick="add_operador('/')">/</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_numero(7)">7</button>
+            <button class="button" onclick="add_numero(8)">8</button>
+            <button class="button" onclick="add_numero(9)">9</button>
+            <button class="button gray" onclick="add_operador('*')">*</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_numero(4)">4</button>
+            <button class="button" onclick="add_numero(5)">5</button>
+            <button class="button" onclick="add_numero(6)">6</button>
+            <button class="button gray" onclick="add_operador('-')">-</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_numero(1)">1</button>
+            <button class="button" onclick="add_numero(2)">2</button>
+            <button class="button" onclick="add_numero(3)">3</button>
+            <button class="button gray" onclick="add_operador('+')">+</button>
+        </div>
+
+        <div class="row">
+            <div></div>
+            <button class="button" onclick="add_numero(0)">0</button>
+            <button class="button" onclick="add_numero('.')">.</button>
+            <button class="button purple" onclick="total()">=</button>
+        </div>
+        <!-- BUTTONS/> -->
     </div>
+
+    <!-- LINK TO GITHUB PROJECT -->
+    <div class="github">
+        <a href="https://github.com/iaematt/calculator" target="_blank" title="Code in GitHub">
+            <img src="/img/github.svg" width="35" />
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+   <script src="script.js"></script>
 </body>
 
 </html>
