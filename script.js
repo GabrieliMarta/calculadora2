@@ -1,14 +1,17 @@
+// armazenamento das partes principais em variáveis
 var input = document.querySelector("#display");
 var operador = "";
 var parar = false;
 
+//Função para limpar o histórico e o input
 function limpar() {
   input.value = "";
   document.querySelector("#history").innerHTML = "";
   operador = ""
 }
 
-function add_numero(string) {
+//Função para adicionar os números no input
+function add_stringnumero(string) {
   if (!parar) {
     if (string === '.' && input.value.indexOf(".") === -1 || string !== '.') {
       input.value = input.value + string;
@@ -26,6 +29,7 @@ function add_numero(string) {
   }
 }
 
+//Função para adicionar os números ao input
 function add_operador(op) {
   if (input.value == "") {
     input.value = "0";
@@ -42,6 +46,7 @@ function add_operador(op) {
   }
 }
 
+//Função para calcular o total  
 function total() {
   if (!parar) {
     numeros = input.value.split(operador);
