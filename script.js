@@ -3,14 +3,14 @@ var input = document.querySelector("#display");
 var operador = "";
 var parar = false;
 
-//Função para limpar o histórico e o input
+//função para limpar o histórico e o input
 function limpar() {
   input.value = "";
   document.querySelector("#history").innerHTML = "";
   operador = ""
 }
 
-//Função para adicionar os números no input
+//função para adicionar os números no input
 function add_stringnumero(string) {
   if (!parar) {
     if (string === '.' && input.value.indexOf(".") === -1 || string !== '.') {
@@ -29,7 +29,7 @@ function add_stringnumero(string) {
   }
 }
 
-//Função para adicionar os números ao input
+//função para adicionar os números ao input
 function add_operador(op) {
   if (input.value == "") {
     input.value = "0";
@@ -46,7 +46,7 @@ function add_operador(op) {
   }
 }
 
-//Função para calcular o total  
+//função para calcular o total  
 function total() {
   if (!parar) {
     numeros = input.value.split(operador);
